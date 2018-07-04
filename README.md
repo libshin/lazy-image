@@ -2,6 +2,8 @@
 
 Lazy load images that are off the viewport.
 
+Take a look at an [example](https://libshin.github.io/lazyImage/index.html).
+
 ## How to use
 
 ### Basic usage
