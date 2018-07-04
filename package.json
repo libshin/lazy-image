@@ -1,0 +1,31 @@
+{
+  "name": "@libshin/lazy-image",
+  "version": "0.1.0",
+  "description": "",
+  "source": "index.js",
+  "umd:main": "build/lazy-image.umd.js",
+  "main": "build/lazy-image.js",
+  "module": "build/lazy-image.m.js",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/libshin/lazyImage.git"
+  },
+  "keywords": [
+    "js",
+    "image",
+    "lazy",
+    "laod"
+  ],
+  "author": "ayc0 (https://ayc0.github.io/stuff/)",
+  "license": "MIT",
+  "scripts": {
+    "build": "microbundle",
+    "release": "npm publish --access public"
+  },
+  "devDependencies": {
+    "microbundle": "^0.4.4"
+  },
+  "dependencies": {
+    "@libshin/in-viewport": "^0.1.5"
+  }
+}
