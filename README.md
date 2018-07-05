@@ -24,7 +24,7 @@ In order to use this package, just use `lazy-url` instead of `url` in `<img>`.
 
 ### Placeholder
 
-If you wrap a `img[lazy-src]` inside of a `div[lazy-placeholder]`, the image related to `lazy-placeholder` will be shown instead of the image and once the image is loaded, `lazy-src` will appear and replace `lazy-placeholder`.
+If you wrap a `img[lazy-src]` inside of a `[lazy-placeholder]`, the image related to `lazy-placeholder` will be shown instead of the image and once the image is loaded, `lazy-src` will appear and replace `lazy-placeholder`.
 
 ```html
 <!-- head -->
@@ -36,6 +36,8 @@ If you wrap a `img[lazy-src]` inside of a `div[lazy-placeholder]`, the image rel
 <!-- footer -->
 <script src="..../lazy-image.umd.js"></script>
 <script>
-  lazyImage() // Scan for img[lazy-src] and div[lazy-placeholder]
+  lazyImage(strict, options) // Scan for img[lazy-src] and [lazy-placeholder]
 </script>
 ```
+
+See [here](https://github.com/libshin/inViewport#strict-mode) for the details on the strict/loose mode and [here](https://github.com/libshin/inViewport#options) for the options' details.

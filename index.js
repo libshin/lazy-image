@@ -18,12 +18,17 @@ function detectLoadAndVisibility(img) {
   }
 }
 
-function scan() {
+/**
+ * Scans DOM to detect img[lazy-src] and [lazy-placeholder]
+ * @param {boolean} strict
+ * @param {{top: number, bottom: number, left: number, right: number, now: boolean}} options
+ */
+function scan(strict, options = {}) {
   [].forEach.call(document.querySelectorAll("img[lazy-src]"), img => {
     if (img.lazyId) {
       return;
     }
-    img.lazyId = attach(img, false, visible => {
+    img.lazyId = attach(img, strict, options, visible => {
       img.visible = visible;
       if (visible) {
         const lazySrc = img.getAttribute("lazy-src");

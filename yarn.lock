@@ -2,9 +2,9 @@
 # yarn lockfile v1
 
 
-"@libshin/in-viewport@^0.1.5":
-  version "0.1.6"
-  resolved "https://registry.yarnpkg.com/@libshin/in-viewport/-/in-viewport-0.1.6.tgz#dc43b898d6325cedc1bd6a58f124694bb7b9df19"
+"@libshin/in-viewport@^0.2.2":
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/@libshin/in-viewport/-/in-viewport-0.2.2.tgz#e31861dc5561e5dbe7833b399befe751635cad8d"
 
 "@vue/component-compiler-utils@^1.0.0":
   version "1.3.1"
@@ -219,8 +219,8 @@ caniuse-db@^1.0.30000529, caniuse-db@^1.0.30000634, caniuse-db@^1.0.30000639:
   resolved "https://registry.yarnpkg.com/caniuse-db/-/caniuse-db-1.0.30000862.tgz#6c1e296f8bbe5e5ea46f04215e8b90ed8fb9da8d"
 
 caniuse-lite@^1.0.30000792, caniuse-lite@^1.0.30000805:
-  version "1.0.30000862"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30000862.tgz#7ca14f5079fa8f77ac814fca92d45deb4b7eff9d"
+  version "1.0.30000864"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30000864.tgz#7a08c78da670f23c06f11aa918831b8f2dd60ddc"
 
 chalk@^1.0.0, chalk@^1.1.3:
   version "1.1.3"
