@@ -1,6 +1,6 @@
 {
   "name": "@libshin/lazy-image",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Lazy load images that are off the viewport",
   "source": "index.js",
   "umd:main": "build/lazy-image.umd.js",
@@ -19,6 +19,7 @@
   "author": "ayc0 (https://ayc0.github.io/stuff/)",
   "license": "MIT",
   "scripts": {
+    "start": "microbundle watch",
     "build": "microbundle",
     "release": "yarn -s build && npm publish --access public"
   },

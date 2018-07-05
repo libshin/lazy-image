@@ -2,9 +2,10 @@ import { attach, detach } from "@libshin/in-viewport/listener";
 
 import "./index.css";
 
-function detectLoadAndVisibility(img, id) {
+function detectLoadAndVisibility(img) {
   if (img.loaded && img.visible) {
-    detach(id);
+    detach(img.lazyId);
+    delete img.lazyId;
     img.removeAttribute("lazy-src");
     const parent = img.parentElement;
     const lazyPlaceholder = parent.getAttribute("lazy-placeholder");
@@ -17,26 +18,33 @@ function detectLoadAndVisibility(img, id) {
   }
 }
 
-[].forEach.call(document.querySelectorAll("img[lazy-src]"), img => {
-  const id = attach(img, false, visible => {
-    img.visible = visible;
-    if (visible) {
-      const lazySrc = img.getAttribute("lazy-src");
-      if (lazySrc) {
-        img.setAttribute("src", lazySrc);
-      }
+function scan() {
+  [].forEach.call(document.querySelectorAll("img[lazy-src]"), img => {
+    if (img.lazyId) {
+      return;
     }
-    detectLoadAndVisibility(img, id);
+    img.lazyId = attach(img, false, visible => {
+      img.visible = visible;
+      if (visible) {
+        const lazySrc = img.getAttribute("lazy-src");
+        if (lazySrc) {
+          img.setAttribute("src", lazySrc);
+        }
+      }
+      detectLoadAndVisibility(img);
+    });
+
+    img.onload = () => {
+      img.loaded = true;
+      detectLoadAndVisibility(img);
+    };
+
+    const parent = img.parentElement;
+    const lazyPlaceholder = parent.getAttribute("lazy-placeholder");
+    if (lazyPlaceholder) {
+      parent.style.background = `no-repeat center url(${lazyPlaceholder}) / cover`;
+    }
   });
+}
 
-  img.onload = () => {
-    img.loaded = true;
-    detectLoadAndVisibility(img, id);
-  };
-
-  const parent = img.parentElement;
-  const lazyPlaceholder = parent.getAttribute("lazy-placeholder");
-  if (lazyPlaceholder) {
-    parent.style.background = `no-repeat center url(${lazyPlaceholder}) / cover`;
-  }
-});
+export default scan;

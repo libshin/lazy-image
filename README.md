@@ -16,7 +16,10 @@ In order to use this package, just use `lazy-url` instead of `url` in `<img>`.
 <!-- somewhere in the body -->
 <img lazy-src="image_url" alt="alt">
 <!-- footer -->
-  <script src="..../lazy-image.umd.js"></script>
+<script src="..../lazy-image.umd.js"></script>
+<script>
+  lazyImage() // Scan for img[lazy-src]
+</script>
 ```
 
 ### Placeholder
@@ -31,5 +34,8 @@ If you wrap a `img[lazy-src]` inside of a `div[lazy-placeholder]`, the image rel
   <img lazy-src="image_url" alt="alt">
 </div>
 <!-- footer -->
-  <script src="..../lazy-image.umd.js"></script>
+<script src="..../lazy-image.umd.js"></script>
+<script>
+  lazyImage() // Scan for img[lazy-src] and div[lazy-placeholder]
+</script>
 ```
