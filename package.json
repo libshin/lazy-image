@@ -1,6 +1,6 @@
 {
   "name": "@libshin/lazy-image",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Lazy load images that are off the viewport",
   "source": "index.js",
   "umd:main": "build/lazy-image.umd.js",
@@ -8,7 +8,7 @@
   "module": "build/lazy-image.m.js",
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/libshin/lazyImage.git"
+    "url": "git+ssh://git@github.com:libshin/lazy-image.git"
   },
   "keywords": [
     "js",
