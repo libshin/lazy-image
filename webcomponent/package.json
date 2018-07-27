@@ -1,6 +1,6 @@
 {
   "name": "@libshin/lazy-image/webcomponent",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "source": "index.js",
   "umd:main": "../build/webcomponent.umd.js",
   "main": "../build/webcomponent.js",
