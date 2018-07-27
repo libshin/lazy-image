@@ -1,6 +1,6 @@
 {
   "name": "@libshin/lazy-image",
-  "version": "0.2.2",
+  "version": "0.3.0",
   "description": "Lazy load images that are off the viewport",
   "source": "index.js",
   "umd:main": "build/lazy-image.umd.js",

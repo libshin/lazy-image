@@ -1,0 +1,13 @@
+{
+  "name": "@libshin/lazy-image/webcomponent",
+  "version": "0.3.0",
+  "source": "index.js",
+  "umd:main": "../build/webcomponent.umd.js",
+  "main": "../build/webcomponent.js",
+  "module": "../build/webcomponent.m.js",
+  "author": "ayc0 (https://ayc0.github.io/stuff/)",
+  "license": "MIT",
+  "scripts": {
+    "start": "microbundle watch"
+  }
+}
