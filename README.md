@@ -13,8 +13,10 @@ In order to use this package, just use `lazy-url` instead of `url` in `<img>`.
 ```html
 <!-- head -->
 <link rel="stylesheet" href="..../lazy-image.css">
+
 <!-- somewhere in the body -->
 <img lazy-src="image_url" alt="alt">
+
 <!-- footer -->
 <script src="..../lazy-image.umd.js"></script>
 <script>
@@ -29,10 +31,12 @@ If you wrap a `img[lazy-src]` inside of a `[lazy-placeholder]`, the image relate
 ```html
 <!-- head -->
 <link rel="stylesheet" href="https://unpkg.com/@libshin/lazy-image/build/lazy-image.css">
+
 <!-- somewhere in the body -->
 <div lazy-placeholder="placeholder_src">
   <img lazy-src="image_url" alt="alt">
 </div>
+
 <!-- footer -->
 <script src="https://unpkg.com/@libshin/lazy-image/build/lazy-image.umd.js"></script>
 <script>
